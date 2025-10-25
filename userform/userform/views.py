@@ -3,5 +3,5 @@ from django.shortcuts import *
 from django.core.paginator import *
 from django import *
 from django.shortcuts import render
-def home(request):
-    return render (request, 'userform/index.html')
+def index(request):
+    return render(request,'index.html')

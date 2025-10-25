@@ -57,7 +57,7 @@ ROOT_URLCONF = 'userform.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR, 'userform/templates'],
+        'DIRS': [BASE_DIR / 'userform' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,11 +124,11 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# #Static file base dir
-# STATIC_DIR = [
-#     BASE_DIR, "static/"
-# ]
+#Static file base dir
+STATIC_DIR = [
+    BASE_DIR, "static/"
+]
 
-# #Media file base dir
-# MEDIA_ROOT =BASE_DIR/"media"
-# MEDIA_URL= "/media/"
+#Media file base dir
+MEDIA_ROOT =BASE_DIR/"media"
+MEDIA_URL= "/media/"

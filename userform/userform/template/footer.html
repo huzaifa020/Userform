@@ -1,0 +1,24 @@
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            // 1. Prevent the default form submission (page reload)
+            event.preventDefault();
+
+            // 2. Form validation check (Bootstrap's 'required' handles most, but we check here too)
+            if (this.checkValidity()) {
+                // 3. Clear the form fields after successful 'submission'
+                this.reset();
+                
+                // 4. Show the Thank You Modal (Popup)
+                // Get the modal element
+                var thankYouModalElement = document.getElementById('thankYouModal');
+                // Create a Bootstrap Modal instance
+                var thankYouModal = new bootstrap.Modal(thankYouModalElement);
+                // Show the modal
+                thankYouModal.show();
+            }
+        });
+    </script>
+</body>
+</html>
